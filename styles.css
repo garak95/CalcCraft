@@ -213,13 +213,11 @@ td[data-col-letter]::before {
 }
 
 /* Row labels - display to the left of first cell in each row */
-tr th:first-child[data-row-number]::after,
-tr td:first-child[data-row-number]::after {
+tr[data-row-number]::before {
     content: attr(data-row-number);
     position: absolute;
-    left: -25px;
-    top: 50%;
-    #transform: translateY(-50%);
+    left: 0px;
+    margin-top: 1em;
     font-size: 0.75em;
     color: var(--text-muted);
     font-weight: normal;
